@@ -22,13 +22,13 @@ This project doesn't run the assembly code that was given.
 * Supports comments in source file
 
 **How it works**:
-*The program does this steps for each input file:*
-1. Parses all the macros with syntax checks. If any error was found, stops and goes to next input file. Otherwise, outputs .am file with parsed macros
-2. The program reads the output .am file line after line, for each line it checks the syntax and prints the first error found.
-In addition, depending on the type of the line it does this if no error was found:
-  1. Code line: Increments IC(instruction count) by 4
-  2. Data directive: Increments DC(data count) by the amount of bytes that were stored
-  3. .entry/.extern and labels: Stores label's name and address in the symbol table
-3. After reading a line, it stores early machine code of that line
-4. After all the file was readen, the program reads the symbol table and according to it, fills the missing machine code parts
-5. Builds .entry and .extern files according to the symbol table
+The program does this steps for each input file:
+  1. Parses all the macros with syntax checks. If any error was found, stops and goes to next input file. Otherwise, outputs .am file with parsed macros
+  2. The program reads the output .am file line after line, for each line it checks the syntax and prints the first error found.
+  In addition, depending on the type of the line it does this if no error was found:
+    1. Code line: Increments IC(instruction count) by 4
+    2. Data directive: Increments DC(data count) by the amount of bytes that were stored
+    3. .entry/.extern and labels: Stores label's name and address in the symbol table
+  3. After reading a line, it stores early machine code of that line
+  4. After all the file was readen, the program reads the symbol table and according to it, fills the missing machine code parts
+  5. Builds .entry and .extern files according to the symbol table
