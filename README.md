@@ -22,7 +22,7 @@ This project doesn't run the assembly code that was given.
 * Supports comments in source file
 
 **How it works**:
-The program does this steps for each input file:
+**The program does this steps for each input file:**
   1. Parses all the macros with syntax checks. If any error was found, stops and goes to next input file. Otherwise, outputs .am file with parsed macros
   2. The program reads the output .am file line after line, for each line it checks the syntax and prints the first error found.
   In addition, depending on the type of the line it does this if no error was found:
